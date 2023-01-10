@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <script src="/DAY17/server.js"></script>
+    <style>
+        #rag{
+            left: 50%;
+            top: 50%;
+            margin-left: -10%;
+            position: absolute;
+           margin-top: -20%;
+            padding: 40px;
+            border: 1px solid rgb(236, 25, 29);
+            font-size: 30px;
+            background-color: dodgerblue;
+            
+        }
+        #d>input{
+            padding:10px;
+            margin-top: 10px;
+            width: 200px;
+            border-radius: 20px;
+        }
+        #c>input{
+            padding:10px;
+            margin-top: 10px;
+            width: 200px;
+            border-radius: 20px;
+        }
+        #v>input{
+            padding:10px;
+            margin-top: 10px;
+            width: 200px;
+            border-radius: 20px;
+        }
+        #s>button{
+            padding:5px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        #p>button{
+            padding:5px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="rag">
+    <h1>Register</h1>
+    <div id="d">
+        <label >Full Name</label><br/>
+        <input type="text"id="name" placeholder="Enter your name.."required/><br/>
+    </div>
+    <div id="c">
+      <lable>Email or Phone</lable><br/>
+      <input type="text"id="Email" placeholder="Enter Email id.."required/><br/>
+    </div>
+    <div id="v">
+    <lable>Password</lable><br/>
+    <input type="password"id="password"placeholder="Enter your password.."required/><br/>
+    </div>
+    <div id="s">
+    <button onclick="register()">Register</button>
+    </div>
+    <div id="p">
+    <button><a href="./login.html">Login</a></button>
+    </div>
+    </div>
+</body>
+</html>

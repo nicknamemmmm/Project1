@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart page</title>
+    <style>
+        #screen > div {
+            width:60 ;
+            margin: auto;
+            border: 1px solid green;
+            height: 500px;
+            display: flex;
+        }
+        #screen > div >div:nth-child(1){
+            width: 70%;
+            border: 1px solid red;
+            height: 500px;
+        }
+        #screen > div >div:nth-child(2){
+            width: 30%;
+            border: 1px solid blue;
+            height: 300px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var isLoggedIn =JSON.parse( localStorage.getItem("isUserLoggedIn"));
+            console.log(isLoggedIn);
+            if(isLoggedIn == true ){
+            alert("welcome home");
+            const allproducts=JSON.parse( localStorage.getItem("allproducts"));
+           var leftCart = document.getElementById("leftcart");
+            for(var i=0; i<allproducts.length;i++){
+                console.log(allproducts[i],"allproducts")
+                const innerDiv= document.createElement("div");
+                var img = document.createElement("img");
+                img.src = allproducts[i].pI;
+                innerDiv.append(img);
+
+                leftcart.append(innerDiv)
+            }
+            }else{
+                alert("login first");
+                window.location.href='./login.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Cart Page</h1>
+    <div id="screen">
+        <div>
+            <div id="leftcart"></div>
+            <div></div>
+        </div>
+    </div>
+    <script src="./server.js"></script>
+</body>
+</html>

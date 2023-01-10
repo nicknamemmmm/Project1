@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="/DAY17/server.js"></script>
+    <style>
+        #page{
+            left:50%;
+            top:50%;
+          margin-left:-10%;
+          position: absolute; 
+          margin-top: -20%; 
+          border: 1px solid rgb(231, 16, 16);
+          padding: 40px;
+          font-size: 30px;
+          background-color: darkcyan;
+        }
+        #page >div>input{
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #page >div>div>input{
+            padding: 30px;
+        }
+        button{
+            background-color: aqua;
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div id ="page">
+    <h1>Login</h1>
+    <div>
+    <lable>Email Id & Phone</lable><br/>
+    <input type="email"id="email"placeholder="email & Phone"/><br/>
+    </div>
+    <div>
+    <lable>Password</lable><br/>
+    <input type="password"id="password"placeholder="Password"/><br/>
+    </div>
+    <button onclick="login()">Login</button>
+    <button><a href="./register.html">Register</a></button>
+    </div>
+</body>
+</html>
